@@ -100,7 +100,7 @@ var cnPrefix = {
     "Next lvl DPS: ": "下一级DPS: ",
     "Current DPS: ": "当前DPS: ",
     "Upgrade ": "升级 ",
-    "": "",
+    "Cooldown ": "冷却 ",
     "": "",
     "": "",
     "": "",
