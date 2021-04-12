@@ -457,8 +457,9 @@ div.grid-container {
 
 .selection-label {
     margin-left: 5px;
+    font-size: 14px;
     float: left;
-    width: 150px;
+/*    width: 150px;*/
 }
 
 .sell-button {
