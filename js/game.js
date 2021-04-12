@@ -337,7 +337,9 @@ angular.module('HexaClicker', [])
         $scope.resetGame = function() {
             if(confirm("你确定吗?你会失去所有的游戏进度。")) {
                 window.localStorage.removeItem("hexaclickersave");
-                window.location.reload();
+                setTimeout(function(){
+                    window.location.reload();
+                },500)
             }
         }
 
@@ -392,7 +394,9 @@ angular.module('HexaClicker', [])
             var importString = $window.prompt('存档代码');
             var importDecoded = Base64.decode(importString);
             window.localStorage.setItem("hexaclickersave", importDecoded);
+                setTimeout(function(){
             window.location.reload();
+                },500)
         }
 
         $scope.loadGame();
