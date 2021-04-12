@@ -335,7 +335,7 @@ angular.module('HexaClicker', [])
         }
 
         $scope.resetGame = function() {
-            if(confirm("Are you sure? You'll lose all your progress.")) {
+            if(confirm("你确定吗?你会失去所有的游戏进度。")) {
                 window.localStorage.removeItem("hexaclickersave");
                 window.location.reload();
             }
@@ -343,7 +343,7 @@ angular.module('HexaClicker', [])
 
         $scope.createGrid = function() {
             if($scope.Progress.currentLevel.level > 80) {
-                if(confirm("Are you sure? Your hexas and credit will disappear.")) {
+                if(confirm("你确定吗?你的h六边形和点数将会消失。")) {
                     $scope.softReset();
                     $scope.Grid.createGrid();
                 }
@@ -385,11 +385,11 @@ angular.module('HexaClicker', [])
 
         $scope.exportSave = function() {
             var exportString = window.localStorage.getItem("hexaclickersave");
-            window.prompt('Save string', Base64.encode(exportString));
+            window.prompt('存档代码', Base64.encode(exportString));
         }
 
         $scope.importSave = function() {
-            var importString = $window.prompt('Save string');
+            var importString = $window.prompt('存档代码');
             var importDecoded = Base64.decode(importString);
             window.localStorage.setItem("hexaclickersave", importDecoded);
             window.location.reload();
